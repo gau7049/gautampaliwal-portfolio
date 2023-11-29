@@ -1,0 +1,495 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "General Sans", "Helvetica Neue", Arial, sans-serif;
+
+}
+    
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+#mini-circle {
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+    width: 10px;
+    height: 10px;
+    position: fixed;
+    z-index: 9999;
+    border-radius: 50%;
+    background-color: #fff;
+    mix-blend-mode: difference; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+}
+
+*::selection{
+    background-color: white;
+    color: black;
+}
+
+abbr{
+    text-decoration: none;
+}
+
+a{
+    text-decoration: none;
+    transition: 0.3s all ease-out;
+}
+
+.bounding{
+    width: fit-content;
+    overflow: hidden;
+}
+
+.bounding .boundinglem{
+    transform: translateY(100%); /* moves downSide */
+}
+
+#main{
+    width: 100%;
+    background-color: black;
+    overflow: hidden;
+}
+
+#hero{
+    position: relative;
+    width: 100%;
+    height: 100vh;;
+    background-color: black;
+    color: white;
+}
+
+#nav{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    background-color: black;
+    padding: 30px 49px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#nav > div{
+    display: flex;
+    gap: 70px
+}
+
+#nav h4{
+    font-size: 1.3vw;
+    font-weight: 500;
+    height: 3vw;
+    width: 8.5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s all ease-out;
+}
+
+#nav h4:hover{
+    color: black;
+    background-color: #fff;
+    border: 1px solid white;
+    border-radius: 100px;
+    padding: 10px;
+}
+
+#nav a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.3vw;
+    font-weight: 500;
+}
+
+
+.hover-effect {
+    position: relative;
+    text-decoration: none; /* Remove default underline */
+    transition: color 0.3s ease; /* Transition effect for smooth color change */
+  
+    /* Additional styles, if any */
+  
+    /* Underline effect using ::before pseudo-element */
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 1px; /* Adjust the height of the underline */
+      bottom: -2px;
+      left: 0;
+      background-color: white; /* Color of the underline */
+      transform-origin: bottom right;
+      transform: scaleX(0);
+      transition: transform 0.3s ease; /* Transition effect for smooth underline change */
+    }
+  
+    /* Animated underline effect on hover */
+    &:hover {
+      /* Additional styles on hover, if any */
+      &::before {
+        transform-origin: bottom left;
+        transform: scaleX(1);
+      }
+    }
+  }
+  
+
+#heading, .setted{
+    padding-top: 234px;
+    margin-left: 10px;
+    text-transform: uppercase;
+}
+
+#heading{
+    display: block;
+}
+
+#heading #secondh1{
+    width: fit-content; /* takes width with the respect to content */
+    margin-left: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+#heading #secondh1 h5{
+    font-size: 18px;
+    text-align: end;
+    margin-top: 18px;
+}
+
+#heading h1{
+    font-family: "General Sans Medium", "Helvetica Neue", Arial, sans-serif;;
+    margin-left: 47px;
+    color: rgb(163, 163, 163);
+    font-size: 10.7vw;
+    font-weight: 900;
+    font-stretch: 40px;
+    line-height: 0.9;
+}
+
+#hero-footer{
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 2.7vw;
+}
+
+
+#hero-footer a{
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.1vw;
+    height: 3vw;
+    width: 7vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s all ease-out;
+}
+
+#hero-footer a:hover{
+    color: black;
+    background-color: #fff;
+    border: 2px solid;
+    border-radius: 100px;
+    padding: 10px;
+}
+
+#about-me{
+    /* opacity: 1; */
+    display: none;
+    padding: 10vw;
+    text-transform: none;
+    pointer-events:none;
+}
+
+#about-me h3{
+    font-size: 2vw;
+}
+
+#about-me p{
+    font-size: 1.3vw;
+    padding: 3vw;
+    line-height: 40px;
+}
+
+#projects{
+    /* opacity: 0; */
+    display: none;
+    color: rgb(163, 163, 163);
+    padding-right: 10vw;
+    padding-top: 180px;
+    background-color: black;
+    width: 100%;
+    height: 100vh;
+}
+
+.elem{
+    width: 100%;
+    position: relative;
+    padding: 1vw 0vw 1vw 3vw;
+}
+
+.elem a{
+    color: rgb(163, 163, 163);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.elem h1{
+    text-transform: uppercase;
+    font-size: 5vw;
+}
+
+.elemfirst{
+    border-top: 1px solid #888;
+    border-bottom: 1px solid #888;
+}
+
+.elemLast{
+    border-bottom: 1px solid #888;
+}
+
+.elem img {
+    opacity: 0;
+    pointer-events: none; 
+    height: 150%;
+    width: 30%;
+    z-index: 10;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+#skills{
+    padding: 9.5vw;
+    /* opacity: 0; */
+    display: none;
+}
+
+#skills h1{
+    margin-top: -20px;
+    margin-bottom: 20px;
+    pointer-events: none;
+    /* margin: 10px 0px; */
+    /* font-size: 2.5vw; */
+}
+
+#skills ul li{
+    margin-bottom: 50px;
+}
+
+#skills ul{
+    padding-left: 3.5vw;
+}
+
+#skills ul h2{
+    width: fit-content;
+    cursor: pointer;
+    border-top-right-radius: 2px;
+    padding: 8px;
+    border-top: 2px solid;
+    border-right: 2px solid;
+    /* background-color: #888; */
+    margin-bottom: 5px;
+}
+
+#skills ul h2:hover{
+    background-color: #88888866 ;
+}
+
+#skills ul p{
+    opacity: 0;
+    /* transform: translateY(-100%); */
+    opacity: 0;
+    font-size: 1vw;
+    color: gray;
+}
+
+#contact-me{ /* display flex*/
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#contact-me a{
+    color: white;
+    text-decoration: none;
+    width: 10.2vw;
+    height: 3vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#contact-me img{
+    width: 30%;
+    border-radius: 10px;
+}
+
+#contact-me > div{
+    display: flex;
+    margin: 40px 0px;
+    gap: 100px;
+}
+
+#contact-me > div a:hover{
+    background-color: white;
+    color: black;
+    padding: 10px;
+    border-radius: 100px;
+}
+
+@media (max-width: 600px){
+    #mini-circle{
+        display: none;
+    }
+    #nav{
+        padding: 25px 20px;
+    }
+    #nav > div{
+        gap: 0.7vh;
+    }
+    #nav h4{
+        font-size: 1.4vh;
+        width: 9.5vh;
+        height: 4vh;
+    }
+    #nav .hover-effect{
+        font-size: 1.4vh;
+        width: 70px;
+        /* background-color: aqua; */
+        height: 4vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 900;
+    }
+    #nav h4:hover{
+        padding: 5px;
+        border: none;
+        border-radius: 50px;
+        /* font-size: 1vh; */
+        /* background-color: aqua; */
+    }
+    .hover-effect{
+        position: static;
+        &::before{
+            width: 0%;
+        }
+    }
+
+
+    #heading, .setted{
+        padding-top: 30vh;
+        margin-left: 0vh;
+    }
+
+    #heading #secondh1{
+        margin-left: 6vh;
+        margin-top: 10px;
+    }
+
+    #heading #secondh1 h5{
+        font-size: 2vh;
+        margin-top: 10px;
+    }
+
+    #heading h1{
+        margin-left: 6.5vh;
+    }
+
+    #hero-footer{
+        padding: 0px 20px;
+    }
+
+    #hero-footer a{
+        font-size: 1.4vh;
+        width: 80px;
+        height: 4vh;
+    }
+    #hero-footer a:hover{
+        padding: 5px;
+        border-radius: 50px;
+    }
+
+    #about-me{
+        padding-top: 14vh;
+        padding-left: 7vh;
+    }
+    #about-me h3{
+        font-size: 2.5vh;
+    }
+    #about-me p{
+        font-size: 2.1vh;
+        padding: 0;
+        padding-right: 10px;
+        line-height: 3vh;
+    }
+    .elem{
+        padding: 2vh 0vh 2vh 3vh;
+    }
+    .elem h1{
+        font-size: 3.8vh;
+    }
+    .elem img{
+        display: none;
+    }
+    #skills{
+        padding-top: 14vh;
+        padding-left: 7vh;
+    }
+    #skills h1{
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: 2.5vh;
+    }
+    #skills ul li{
+        margin-bottom: 2vh;
+    }
+    #skills ul{
+        padding-left: 2vh;
+    }
+    #skills ul h2{
+        font-size: 2.1vh;
+    }
+    #skills ul p{
+        font-size: 1.7vh;
+    }
+    #contact-me img{
+        width: 75%;
+        margin-left: -2vh;
+    }
+    #contact-me h1{
+        font-size: 2.5vh;
+        border: 2px solid white;
+        padding: 10px;
+        border-radius: 20px;
+        color: black;
+        background-color: white;
+    }
+    #contact-me > div a:hover{
+        background-color: transparent;
+        color: white;
+        padding: 0;
+        border-radius: 0;
+    }
+    #contact-me > div{
+        gap: 90px;
+        margin: 60px 0px;
+    }
+    
+}
