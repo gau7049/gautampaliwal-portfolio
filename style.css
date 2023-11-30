@@ -167,6 +167,7 @@ a{
 
 #heading #secondh1 h5{
     font-size: 1vw;
+    color: rgb(163, 163, 163);
     text-align: end;
     margin-top: 10px;
 }
@@ -412,7 +413,7 @@ a{
     }
 
     #heading #secondh1 h5{
-        font-size: 2vh;
+        font-size: 1.5vh;
         margin-top: 10px;
     }
 
