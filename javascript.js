@@ -1,3 +1,19 @@
+let cursor = document.querySelector("#mini-circle"), timeout;
+
+function changeCursorShape(){
+  cursor.style.height = "20px";
+  cursor.style.width = "20px";
+  cursor.style.left = "-6px";
+  cursor.style.top = "-13px";
+}
+
+function normalCursorShape(){
+  cursor.style.height = "10px";
+  cursor.style.width = "10px";
+  cursor.style.left = "0px";
+  cursor.style.top = "0px";
+}
+
 function firstPageAnime(){
     var t1 = gsap.timeline();
   
@@ -26,7 +42,6 @@ function firstPageAnime(){
 
 firstPageAnime();
 
-let cursor = document.querySelector("#mini-circle"), timeout;
 
 function MovemomentCursor() {
     // define default scale value
@@ -57,37 +72,25 @@ function MovemomentCursor() {
   document.querySelectorAll("#nav h4").forEach(function(change){
     change.addEventListener('mousemove', function(){
       // alert();
-       cursor.style.height = "20px";
-      cursor.style.width = "20px";
-      cursor.style.left = "-6px";
-      cursor.style.top = "-13px";
+      changeCursorShape();
     });
     
     change.addEventListener('mouseleave', function(){
       // alert();
-      cursor.style.height = "10px";
-      cursor.style.width = "10px";
-      cursor.style.left = "0px";
-      cursor.style.top = "0px";
+      normalCursorShape
     });
   })
   
   document.querySelectorAll("#hero-footer a").forEach(function(change){
     change.addEventListener('mousemove', function(){
       // alert();
-      cursor.style.height = "20px";
-      cursor.style.width = "20px";
-      cursor.style.left = "-6px";
-      cursor.style.top = "-13px";
+      changeCursorShape();
     
     });
 
     change.addEventListener('mouseleave', function(){
       // alert();
-       cursor.style.height = "10px";
-      cursor.style.width = "10px";
-      cursor.style.left = "0px";
-      cursor.style.top = "0px";
+      normalCursorShape();
     
     });
   })
@@ -106,10 +109,7 @@ function MovemomentCursor() {
     var diffrot = 0;
   
     elem.addEventListener("mouseleave", function (dets) {
-      cursor.style.height = "10px";
-      cursor.style.width = "10px";
-      cursor.style.left = "0px";
-      cursor.style.top = "0px";
+      normalCursorShape();
       cursor.style.mixBlendMode = "difference"
       cursor.innerHTML = ""
       gsap.to(elem.querySelector("img"), {
@@ -323,10 +323,7 @@ document.querySelectorAll("#skills ul li").forEach(function(lan){
 
   lan.querySelector("h2").addEventListener("mouseenter",function(){
 
-    cursor.style.height = "20px";
-    cursor.style.width = "20px";
-    cursor.style.left = "-6px";
-    cursor.style.top = "-13px";
+    changeCursorShape();
     
     gsap.to(lan.querySelector("#skills p"), {
       opacity: 1,
@@ -338,10 +335,7 @@ document.querySelectorAll("#skills ul li").forEach(function(lan){
 
   lan.querySelector("h2").addEventListener("mouseleave",function(){
 
-    cursor.style.height = "10px";
-    cursor.style.width = "10px";
-    cursor.style.left = "0px";
-    cursor.style.top = "0px";
+    normalCursorShape();
     
       gsap.to(lan.querySelector("#skills p"), {
         opacity: 0,
@@ -352,17 +346,11 @@ document.querySelectorAll("#skills ul li").forEach(function(lan){
     
   });
 
-  document.querySelectorAll("#contact-me a").forEach(function(crs){
-    crs.addEventListener("mouseenter", function(){
-      cursor.style.height = "20px";
-      cursor.style.width = "20px";
-      cursor.style.left = "-6px";
-      cursor.style.top = "-13px";
-    });
-    crs.addEventListener("mouseleave", function(){
-      cursor.style.height = "10px";
-      cursor.style.width = "10px";
-      cursor.style.left = "0px";
-      cursor.style.top = "0px";
-    })
+document.querySelectorAll("#contact-me a").forEach(function(crs){
+  crs.addEventListener("mouseenter", function(){
+    changeCursorShape();
   });
+  crs.addEventListener("mouseleave", function(){
+    normalCursorShape();
+  })
+});
