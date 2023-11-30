@@ -503,7 +503,7 @@ a{
         gap: 90px;
         margin: 60px 0px;
     }
-    #project{
+    #projects{
         padding-top: 210px;
     }
     
@@ -655,9 +655,6 @@ a{
         gap: 120px;
         margin: 60px 0px;
     }
-    #project{
-        padding-top: 210px;
-    }
 }
 
 @media (min-width: 1024px) and (max-width: 1025px) {
@@ -805,8 +802,5 @@ a{
     #contact-me > div{
         gap: 70px;
         margin: 40px 0px;
-    }
-    #project{
-        padding-top: 210px;
     }
 }
