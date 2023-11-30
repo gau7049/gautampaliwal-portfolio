@@ -69,6 +69,14 @@ function MovemomentCursor() {
     });
   }
 
+  document.querySelector("#nav a").addEventListener("mousemove", function(){
+    changeCursorShape();
+  });
+
+  document.querySelector("#nav a").addEventListener("mouseleave", function(){
+    normalCursorShape();
+  })
+
   document.querySelectorAll("#nav h4").forEach(function(change){
     change.addEventListener('mousemove', function(){
       // alert();
@@ -77,8 +85,9 @@ function MovemomentCursor() {
     
     change.addEventListener('mouseleave', function(){
       // alert();
-      normalCursorShape
+      normalCursorShape();
     });
+
   })
   
   document.querySelectorAll("#hero-footer a").forEach(function(change){
@@ -191,7 +200,7 @@ function contactMe(){
   gsap.to(contact, {
     opacity: 1,
     display: "flex",
-    delay: 0.2,
+    delay: 0.5,
     duration: 1,
     ease: Expo.easeInOut
   })
@@ -253,7 +262,7 @@ function skls(){
   gsap.to(skill, {
     opacity: 1,
     display: "block",
-    delay: 0.2,
+    delay: 0.5,
     duration: 1,
     ease: Expo.easeInOut
   })
@@ -313,7 +322,7 @@ function home(){
   gsap.to(heading, {
     opacity: 1,
     display: "block",
-    delay: 0.4,
+    delay: 0.5,
     duration: 1,
     ease: Expo.easeInOut
   })
