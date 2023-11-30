@@ -78,7 +78,7 @@ a{
 
 #nav > div{
     display: flex;
-    gap: 70px
+    gap: 3vw
 }
 
 #nav h4{
@@ -142,8 +142,8 @@ a{
   
 
 #heading, .setted{
-    padding-top: 234px;
-    margin-left: 10px;
+    padding-top: 10vw;
+    margin-left: 2vw;
     text-transform: uppercase;
 }
 
@@ -153,21 +153,21 @@ a{
 
 #heading #secondh1{
     width: fit-content; /* takes width with the respect to content */
-    margin-left: 220px;
+    margin-left: 9vw;
     display: flex;
     flex-direction: column;
     align-items: end;
 }
 
 #heading #secondh1 h5{
-    font-size: 18px;
+    font-size: 1vw;
     text-align: end;
-    margin-top: 18px;
+    margin-top: 10px;
 }
 
 #heading h1{
     font-family: "General Sans Medium", "Helvetica Neue", Arial, sans-serif;;
-    margin-left: 47px;
+    margin-left: 6.5vh;
     color: rgb(163, 163, 163);
     font-size: 10.7vw;
     font-weight: 900;
@@ -182,7 +182,7 @@ a{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0px 2.7vw;
+    padding: 0px 55px;
 }
 
 
@@ -221,7 +221,7 @@ a{
 #about-me p{
     font-size: 1.3vw;
     padding: 3vw;
-    line-height: 40px;
+    line-height: 2vw;
 }
 
 #projects{
@@ -238,7 +238,7 @@ a{
 .elem{
     width: 100%;
     position: relative;
-    padding: 1vw 0vw 1vw 3vw;
+    padding: 1.5vw 0vw 1.5vw 3vw;
 }
 
 .elem a{
@@ -250,7 +250,7 @@ a{
 
 .elem h1{
     text-transform: uppercase;
-    font-size: 5vw;
+    font-size: 4vw;
 }
 
 .elemfirst{
@@ -279,15 +279,11 @@ a{
 }
 
 #skills h1{
-    margin-top: -20px;
-    margin-bottom: 20px;
     pointer-events: none;
-    /* margin: 10px 0px; */
-    /* font-size: 2.5vw; */
 }
 
 #skills ul li{
-    margin-bottom: 50px;
+    margin-bottom: 2vw;
 }
 
 #skills ul{
@@ -303,6 +299,7 @@ a{
     border-right: 2px solid;
     /* background-color: #888; */
     margin-bottom: 5px;
+    font-size: 1.3vw;
 }
 
 #skills ul h2:hover{
@@ -323,6 +320,10 @@ a{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+#contact-me h1{
+    font-size: 1.5vw;
 }
 
 #contact-me a{
@@ -442,8 +443,11 @@ a{
     .elem{
         padding: 2vh 0vh 2vh 3vh;
     }
+    .elem a{
+        gap: 10px;
+    }
     .elem h1{
-        font-size: 3.8vh;
+        font-size: 3vh;
     }
     .elem img{
         display: none;
@@ -492,4 +496,300 @@ a{
         margin: 60px 0px;
     }
     
+}
+
+@media (min-width: 601px) and (max-width: 1023px) {
+    #mini-circle{
+        display: none;
+    }
+    #nav{
+        padding: 37px 20px;
+        /* background-color: #888; */
+    }
+    #nav > div{
+        gap: 2vh;
+    }
+    #nav h4{
+        font-size: 2vh;
+        width: 15.5vh;
+        height: 4.5vh;
+    }
+    #nav .hover-effect{
+        font-size: 2vh;
+        width: 14vh;
+        /* background-color: aqua; */
+        height: 4.5vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 900;
+    }
+    #nav h4:hover{
+        padding: 5px;
+        border: none;
+        border-radius: 50px;
+        /* font-size: 1vh; */
+        /* background-color: aqua; */
+    }
+    .hover-effect{
+        position: static;
+        &::before{
+            width: 0%;
+        }
+    }
+
+
+    #heading, .setted{
+        padding-top: 30vh;
+        margin-left: 0vh;
+    }
+
+    #heading #secondh1{
+        margin-left: 6vh;
+        margin-top: 10px;
+    }
+
+    #heading #secondh1 h5{
+        font-size: 2vh;
+        margin-top: 10px;
+    }
+
+    #heading h1{
+        margin-left: 6.5vh;
+    }
+
+    #hero-footer{
+        padding: 0px 20px;
+    }
+
+    #hero-footer a{
+        font-size: 2vh;
+        width: 14vh;
+        height: 4vh;
+    }
+    #hero-footer a:hover{
+        padding: 5px;
+        border-radius: 50px;
+    }
+
+    #about-me{
+        padding-top: 20vh;
+        padding-left: 7vh;
+    }
+    #about-me h3{
+        font-size: 2.7vh;
+    }
+    #about-me p{
+        font-size: 2.3vh;
+        padding: 0;
+        padding-right: 10px;
+        line-height: 4vh;
+    }
+    #projects{
+        padding-top: 250px;
+    }
+    .elem{
+        padding: 3vh 0vh 3vh 3vh;
+    }
+    .elem a{
+        gap: 10px;
+    }
+    .elem h1{
+        font-size: 3vh;
+    }
+    .elem img{
+        display: none;
+    }
+    #skills{
+        padding-top: 20vh;
+        padding-left: 7vh;
+    }
+    #skills h1{
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: 2.7vh;
+    }
+    #skills ul li{
+        margin-bottom: 2.5vh;
+    }
+    #skills ul{
+        padding-left: 2vh;
+    }
+    #skills ul h2{
+        font-size: 2.3vh;
+    }
+    #skills ul p{
+        font-size: 1.8vh;
+    }
+    #contact-me img{
+        width: 75%;
+        margin-left: -2vh;
+    }
+    #contact-me h1{
+        font-size: 2.5vh;
+        border: 2px solid white;
+        padding: 10px 20px;
+        border-radius: 20px;
+        color: black;
+        background-color: white;
+    }
+    #contact-me > div a:hover{
+        background-color: transparent;
+        color: white;
+        padding: 0;
+        border-radius: 0;
+    }
+
+    #contact-me > div{
+        gap: 120px;
+        margin: 60px 0px;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1025px) {
+    #mini-circle{
+        display: none;
+    }
+    #nav{
+        padding: 25px 20px;
+        /* background-color: #888; */
+    }
+    #nav > div{
+        gap: 2.5vh;
+    }
+    #nav h4{
+        font-size: 2.4vh;
+        width: 16.5vh;
+        height: 4.5vh;
+    }
+    #nav .hover-effect{
+        font-size: 2.4vh;
+        width: 17vh;
+        /* background-color: aqua; */
+        height: 4.5vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 900;
+    }
+    #nav h4:hover{
+        padding: 5px;
+        border: none;
+        border-radius: 50px;
+        /* font-size: 1vh; */
+        /* background-color: aqua; */
+    }
+    .hover-effect{
+        position: static;
+        &::before{
+            width: 0%;
+        }
+    }
+
+
+    #heading, .setted{
+        padding-top: 30vh;
+        margin-left: 0vh;
+    }
+
+    #heading #secondh1{
+        margin-left: 6vh;
+        margin-top: 10px;
+    }
+
+    #heading #secondh1 h5{
+        font-size: 2.3vh;
+        margin-top: 10px;
+    }
+
+    #heading h1{
+        margin-left: 6.5vh;
+    }
+
+    #hero-footer{
+        padding: 0px 20px;
+    }
+
+    #hero-footer a{
+        font-size: 2.4vh;
+        width: 16vh;
+        height: 5.5vh;
+    }
+    #hero-footer a:hover{
+        padding: 5px;
+        border-radius: 50px;
+    }
+
+    #about-me{
+        padding-top: 20vh;
+        padding-left: 7vh;
+    }
+    #about-me h3{
+        font-size: 4.7vh;
+    }
+    #about-me p{
+        font-size: 3.5vh;
+        padding: 0;
+        padding-right: 10px;
+        line-height: 5vh;
+    }
+    #projects{
+        padding-top: 200px;
+    }
+    .elem{
+        padding: 3vh 0vh 3vh 3vh;
+    }
+    .elem a{
+        gap: 10px;
+    }
+    .elem h1{
+        font-size: 4vh;
+    }
+    .elem img{
+        display: none;
+    }
+    #skills{
+        padding-top: 20vh;
+        padding-left: 7vh;
+    }
+    #skills h1{
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: 4vh;
+    }
+    #skills ul li{
+        margin-bottom: 2vh;
+    }
+    #skills ul{
+        padding-left: 2vh;
+    }
+    #skills ul h2{
+        font-size: 3.1vh;
+    }
+    #skills ul p{
+        font-size: 2.2vh;
+    }
+    #contact-me img{
+        width: 35%;
+        margin-left: -2vh;
+    }
+    #contact-me h1{
+        font-size: 3vh;
+        border: 2px solid white;
+        padding: 10px 20px;
+        border-radius: 20px;
+        color: black;
+        background-color: white;
+    }
+    #contact-me > div a:hover{
+        background-color: transparent;
+        color: white;
+        padding: 0;
+        border-radius: 0;
+    }
+
+    #contact-me > div{
+        gap: 70px;
+        margin: 40px 0px;
+    }
 }
