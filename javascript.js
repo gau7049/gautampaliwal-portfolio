@@ -1,3 +1,22 @@
+gsap.to("#greyCover", {
+  height: 0 + "vh",
+  duration: 0.4,
+  delay: 3.5,
+  display: "none"
+})
+
+gsap.to("#greyCover h1", {
+  duration: 1.5,
+  delay: 0.4,
+  width: "28vmax"
+})
+
+gsap.to("#greyCover h1", {
+  height: 0,
+  delay: 2.5,
+  duration: 1
+})
+
 let cursor = document.querySelector("#mini-circle"), timeout;
 
 function changeCursorShape(){
@@ -15,11 +34,14 @@ function normalCursorShape(){
 }
 
 function firstPageAnime(){
+
+    document.querySelector("#main").style.position = "static";
+
     var t1 = gsap.timeline();
   
-    t1.from("#nav",{
+    t1.to("#nav",{
         y: '-10',
-        opacity: 0,
+        opacity: 1,
         duration: 1.5,
         ease: Expo.easeInOut
     })
@@ -30,17 +52,17 @@ function firstPageAnime(){
         delay: -1,
         stagger: 0.2
       })
-    .from("#hero-footer",{
+    .to("#hero-footer",{
         y: "-10",
-        opacity: 0,
+        opacity: 1,
         duration: 1.2,
         delay: -1,
         ease: Expo
       })
-  
+      
   }
 
-firstPageAnime();
+setTimeout(firstPageAnime, 3700);
 
 
 function MovemomentCursor() {
@@ -53,7 +75,7 @@ function MovemomentCursor() {
     
     window.addEventListener("mousemove", function (dets) {
       clearTimeout(timeout);
-  
+      
       xscale = gsap.utils.clamp(0.8, 1.2, dets.clientX - xprev);
       yscale = gsap.utils.clamp(0.8, 1.2, dets.clientY - yprev);
   
@@ -72,11 +94,11 @@ function MovemomentCursor() {
   document.querySelector("#nav a").addEventListener("mousemove", function(){
     changeCursorShape();
   });
-
+  
   document.querySelector("#nav a").addEventListener("mouseleave", function(){
     normalCursorShape();
   })
-
+  
   document.querySelectorAll("#nav h4").forEach(function(change){
     change.addEventListener('mousemove', function(){
       // alert();
@@ -331,7 +353,7 @@ function home(){
 document.querySelectorAll("#skills ul li").forEach(function(lan){
 
   lan.querySelector("h2").addEventListener("mouseenter",function(){
-
+    
     changeCursorShape();
     
     gsap.to(lan.querySelector("#skills p"), {
