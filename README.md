@@ -1,3 +1,3 @@
 # Gautam Paliwal
 
-Welcome to my portfolio repository! This portfolio is built using React.js, React Router, tsparticles, and Typed.js to showcase my skills and projects.
+Welcome to my portfolio repository! This portfolio is built using HTML, CSS, JavaScript, and GSAP to showcase my skills and projects.
